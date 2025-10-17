@@ -1,0 +1,120 @@
+<!--
+    GitHub Copilot
+    範例：臺中市政府首頁 Clone 模板（僅示範結構與樣式）
+    注意：請勿未經授權複製官方網站受著作權保護的文字、圖片或標誌。
+    取得授權後，替換下列佔位內容與資源。
+-->
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>臺中市政府 — Clone 範例</title>
+    <style>
+        :root{
+            --primary:#0071bc;
+            --muted:#666;
+            --bg:#f6f7f9;
+            --card:#fff;
+            --maxw:1100px;
+        }
+        *{box-sizing:border-box}
+        body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:#111}
+        .container{max-width:var(--maxw);margin:0 auto;padding:20px}
+        header{background:var(--card);border-bottom:1px solid #e6e9ee}
+        .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+        .brand{display:flex;gap:12px;align-items:center}
+        .logo{width:56px;height:56px;background:linear-gradient(135deg,var(--primary),#005a9c);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+        nav ul{list-style:none;margin:0;padding:0;display:flex;gap:12px}
+        nav a{color:var(--primary);text-decoration:none;padding:8px 10px;border-radius:6px}
+        nav a:hover{background:#eef6ff}
+        .hero{display:flex;gap:20px;padding:28px 20px;align-items:center}
+        .hero .text{flex:1}
+        .hero h1{margin:0 0 8px;font-size:22px;color:var(--primary)}
+        .hero p{margin:0;color:var(--muted)}
+        .hero .cta{margin-top:12px}
+        .btn{background:var(--primary);color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;display:inline-block}
+        main{padding:20px}
+        .grid{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+        .card{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 1px 3px rgba(16,24,40,0.04)}
+        .news-list li{padding:10px 0;border-bottom:1px dashed #eee;list-style:none}
+        .news-list a{color:#111;text-decoration:none}
+        .quick-links{display:flex;flex-wrap:wrap;gap:10px}
+        .quick-links a{background:#f2f6fb;padding:8px 10px;border-radius:6px;color:var(--primary);text-decoration:none}
+        footer{padding:18px 20px;text-align:center;color:var(--muted);font-size:14px;margin-top:18px}
+        @media(max-width:800px){
+            .grid{grid-template-columns:1fr}
+            .hero{flex-direction:column;align-items:flex-start}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container topbar">
+            <div class="brand">
+                <div class="logo">台</div>
+                <div>
+                    <div style="font-weight:700">臺中市政府（Clone 範例）</div>
+                    <div style="font-size:12px;color:var(--muted)">官方資訊請以正式網站為準</div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">市政資訊</a></li>
+                    <li><a href="#">便民服務</a></li>
+                    <li><a href="#">新聞公告</a></li>
+                    <li><a href="#">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero container">
+            <div class="text">
+                <h1>歡迎來到 臺中市政府（Clone 範例）</h1>
+                <p>這是一個示範性的首頁結構，包含導覽、最新消息、便民連結與頁尾。請替換為您取得授權後的正式內容。</p>
+                <div class="cta"><a class="btn" href="#">最新消息</a></div>
+            </div>
+            <div style="width:320px;min-height:160px;background:linear-gradient(180deg,#e6f3ff,#fff);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--primary);font-weight:600">
+                主要橫幅 / 圖片
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+            <section class="card">
+                <h2 style="margin-top:0">最新公告</h2>
+                <ul class="news-list" aria-live="polite">
+                    <li><a href="#">[公告] 範例新聞標題 1 — 2025-10-01</a></li>
+                    <li><a href="#">[公告] 範例新聞標題 2 — 2025-09-28</a></li>
+                    <li><a href="#">[公告] 範例新聞標題 3 — 2025-09-21</a></li>
+                    <li><a href="#">更多公告...</a></li>
+                </ul>
+            </section>
+
+            <aside class="card">
+                <h3 style="margin-top:0">便民服務</h3>
+                <div class="quick-links">
+                    <a href="#">線上申請</a>
+                    <a href="#">稅務服務</a>
+                    <a href="#">交通資訊</a>
+                    <a href="#">疫苗接種</a>
+                    <a href="#">市政公告RSS</a>
+                </div>
+
+                <hr style="margin:14px 0;border:none;border-top:1px solid #eee">
+
+                <h4 style="margin:0 0 8px">聯絡方式</h4>
+                <div style="color:var(--muted);font-size:14px">
+                    地址：臺中市中區示範路1號<br>
+                    電話：(04) 0000-0000
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        © 臺中市政府（Clone 範例） — 本頁面為教學/範例用途，非官方網站。請取得授權後再使用官方內容或商標。
+    </footer>
+</body>
+</html> 
